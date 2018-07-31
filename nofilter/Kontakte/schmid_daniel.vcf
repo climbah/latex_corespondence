@@ -1,0 +1,15 @@
+BEGIN:VCARD
+VERSION:2.1
+N:Daniel;Schmid
+FN:Schmid Daniel
+NICKNAME:Dani
+ORG:Jordi AG
+TEL;WORK;VOICE:044 / 738 60 72
+TEL;CELL;VOICE:078 / 771 55 22
+ADR;WORK:;;Rüchligstrasse 20;Dietikon;Zürich;8953;Schweiz
+LABEL;WORK;ENCODING=QUOTED-PRINTABLE:R=FCchligstrasse 20=0D=0ADietikon, Z=FCrich 8953=0D=0ASchweiz
+ADR;HOME:;;Dorfstrasse 52;Geroldswil;Zürich;8954;Schweiz
+LABEL;HOME;ENCODING=QUOTED-PRINTABLE:Dorfstrasse 52=0D=0AGeroldswil, Z=FCrich 8954=0D=0ASchweiz
+EMAIL;PREF;INTERNET:daenu.schmid@gmail.com
+REV:20090803T165052Z
+END:VCARD
