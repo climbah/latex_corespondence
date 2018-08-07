@@ -1,3 +1,10 @@
+## FOLDERS
+out
+includes/out
+
+## EMACS 
+*.*~
+*.*#
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
@@ -6,7 +13,7 @@
 *.fls
 *.out
 *.toc
-*.*~
+
 ## Intermediate documents:
 *.dvi
 *-converted-to.*
