@@ -1,7 +1,15 @@
 ##############################
-## SET VARIABLES
+## SET GENERAL VARIABLES
 ##############################
 lettertemplate="letter_template"
+##############################
+## CHECKING FOR PARAMETERS
+##############################
+if [[ $1 != "" ]]
+then
+    lettertemplate=$1
+    echo $lettertemplate
+fi
 
 ##############################
 ## GENERATE THE TEMPLATES

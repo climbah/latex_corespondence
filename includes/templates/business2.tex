@@ -1,16 +1,5 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% DEFINE THE COMMANDS
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand\tel[1]{\def \@tel {Tel: #1}}
-\newcommand\recieverone[1]{\def \@recieverone {#1}}
-\newcommand\recievertwo[1]{\def \@recievertwo {#1}}
-\newcommand\recieverthree[1]{\def \@recieverthree {#1}}
-
-\def \@tel {}
-\def \@recieverone{}
-\def \@recievertwo{}
-\def \@recieverthree{}
-%\@reciever{}
+\input{./letter_static_data.tex}
+\input{./letter_dynamic_data.tex}
 \documentclass[a4paper,12pt]{letter}
 %usepackages
 \usepackage[T1]{fontenc}
@@ -22,7 +11,7 @@
 left=3cm, right=2cm,
 top=3cm, bottom=1cm]{geometry}
 \usepackage{helvet}
-
+% PAGE FORMAT
 \pagestyle{empty}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\textwidth}{160mm}
@@ -47,31 +36,29 @@ top=3cm, bottom=1cm]{geometry}
 % return address
 \newsavebox\areturn
 \sbox{\areturn}{\parbox{80mm}{\underline
-    {
-      \small Datahouse
-     \hspace{\fill} Technoparkstrasse 1
-     \hspace{\fill} 8005 Zürich}
+    {\small \toname
+     \hspace{\fill} \tostreet
+     \hspace{\fill} \toplace}
    \rule[-2mm]{0mm}{2mm}}}
 
-\usebox{\areturn}
+
 
 % company address
 \begin{document}
-\tel {hallo}
 \thispagestyle{fancy}
 \renewcommand{\headrulewidth}{0pt}
-\parbox[t][20mm]{50mm}{Daniel Schmid \\ Kilchhaldenstrasse 3 \\ 6264 Pfaffnau \\\\ Mobile: 078 / 771 55 22} \\
+\parbox[t][20mm]{50mm}{\from \\\\ \fromtel} \\
 \par\vspace{10mm}
-\parbox[b][15mm]{90mm}{Zürich, 23. Februar 2009}
-\parbox[b][15mm]{55mm} {Daniel Schmid \\ Dorfstrasse 52 \\ 3185 Geroldswil} \\\\
+%\usebox{\areturn}
+\parbox[b][15mm]{90mm}{\fromdate}
 
 \par 
-\textbf{Subject} \\
+\textbf{\letterSubject}
 
 Sehr geehrter Herr Schmid \\\\
 isl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diaLorem ipsum dolor sit amet, conset
 %\rule[2mm]{10mm}{4mm}
 \vspace{10mm}
 \par\hspace{90mm}Mit freundlichen Grüssen
-\par\vspace{15mm}\hspace{90mm}Daniel Schmid
+\par\vspace{15mm}\hspace{90mm}\fromname
 \end{document}
