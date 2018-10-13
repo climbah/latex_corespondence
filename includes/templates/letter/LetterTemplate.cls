@@ -1,7 +1,10 @@
 \ProvidesClass{LetterTemplate}[2015/02/28 CV class]
+\LoadClass{article}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % DEFINE THE COMMANDS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{./../letter_static_data.text}
+
 \newcommand\tel[1]{\def \@tel {Tel: #1}}
 \newcommand\recieverone[1]{\def \@recieverone {#1}}
 \newcommand\recievertwo[1]{\def \@recievertwo {#1}}
@@ -12,7 +15,6 @@
 \def \@recievertwo{}
 \def \@recieverthree{}
 %\@reciever{}
-\documentclass[a4paper,12pt]{letter}
 %usepackages
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -49,7 +51,7 @@ top=3cm, bottom=1cm]{geometry}
 \newsavebox\areturn
 \sbox{\areturn}{\parbox{80mm}{\underline
     {
-      \small Datahouse
+      \small \from
      \hspace{\fill} Technoparkstrasse 1
      \hspace{\fill} 8005 Zürich}
    \rule[-2mm]{0mm}{2mm}}}
