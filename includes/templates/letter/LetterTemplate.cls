@@ -3,8 +3,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % DEFINE THE COMMANDS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\input{./../letter_static_data.text}
-
+\input{static_data.tex}
+\input{dynamic_data.tex}
 \newcommand\tel[1]{\def \@tel {Tel: #1}}
 \newcommand\recieverone[1]{\def \@recieverone {#1}}
 \newcommand\recievertwo[1]{\def \@recievertwo {#1}}
@@ -51,9 +51,9 @@ top=3cm, bottom=1cm]{geometry}
 \newsavebox\areturn
 \sbox{\areturn}{\parbox{80mm}{\underline
     {
-      \small \from
-     \hspace{\fill} Technoparkstrasse 1
-     \hspace{\fill} 8005 Zürich}
+      \small \fromname
+     \hspace{\fill} \fromstreet
+     \hspace{\fill} \fromplace }
    \rule[-2mm]{0mm}{2mm}}}
 
 
@@ -63,11 +63,10 @@ top=3cm, bottom=1cm]{geometry}
 \tel {hallo}
 \thispagestyle{fancy}
 \renewcommand{\headrulewidth}{0pt}
-\parbox[t][20mm]{50mm}{Daniel Schmid \\ Kilchhaldenstrasse 3 \\ 6264 Pfaffnau \\\\ Mobile: 078 / 771 55 22} \\
+\parbox[t][20mm]{50mm}{\from} 
 \par\vspace{10mm}
-\parbox[b][15mm]{90mm}{Zürich, 23. Februar 2009}
+\parbox[b][15mm]{90mm}{\fromdate}
 \parbox[b][15mm]{55mm} {Daniel Schmid \\ Dorfstrasse 52 \\ 3185 Geroldswil} \\\\
-
 \par 
 \textbf{Subject} \\
 
