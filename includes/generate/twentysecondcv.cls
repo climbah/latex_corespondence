@@ -6,6 +6,7 @@
 %	 REQUIRED PACKAGES
 %-----------------------------------------------------------------------	-----------------
 
+\RequirePackage[quiet]{fontspec}
 \RequirePackage[sfdefault]{ClearSans}
 
 \def\arrow#1{\pspicture[shift=2pt](#1,0)\psline{->}(#1,0)\endpspicture}
@@ -118,7 +119,7 @@
 % --------------------------------------------------------------------------------------
 % 	FONTS
 %-------------------------------------------------------------------------------------
-%\newfontfamily\headingfont[Path = fonts/]{segoeuib.ttf}
+\newfontfamily\headingfont[Path = fonts/]{segoeuib.ttf}
 
 %----------------------------------------------------------------------------------------
 %	 SIDEBAR DEFINITIONS

@@ -3,7 +3,8 @@
 ##############################
 #lettertemplate="letter_template"
 home=/data/GITLAB/latex_dossier
-lettertemplate="LetterTemplate"
+lettertemplate="business2"
+cvtemplate="template"
 ##############################
 ## CREATING OUT DIRECTORIES
 ##############################
@@ -20,14 +21,15 @@ cd $home
 ##############################
 ## GENERATE THE TEMPLATES
 ##############################
-pdflatex --output-directory='includes/generate/out/' 'includes/generate/'"$lettertemplate"'.tex'
-pdflatex --output-directory='includes/generate/out/' 'includes/generate/template.tex'
-
+cd includes/generate
+pdflatex --output-directory='out/' "$lettertemplate"'.tex'
+pdflatex --output-directory='out/' "$cvtemplate"'.tex'
+cd $home
 ##############################
 ## COPY OUTPUT TO OUT
 ##############################
-cp 'includes/out/letter/'"$lettertemplate"'.pdf' ./out/motivationsschreiben.pdf
-cp 'includes/out/cv/cv_template.pdf' .
+cp 'includes/out/'"$lettertemplate"'.pdf' ./out/motivationsschreiben.pdf
+cp 'includes/out/'"$cvtemplate"'.pdf' .
 
 ##############################
 ## CHECKING FOR PARAMETERS
