@@ -23,14 +23,14 @@ cd $home
 ##############################
 cd includes/generate
 pdflatex --output-directory='out/' "$lettertemplate"'.tex'
-pdflatex --output-directory='out/' "$cvtemplate"'.tex'
-cd $home
+xelatex --output-directory='out/' "$cvtemplate"'.tex'
+
 ##############################
 ## COPY OUTPUT TO OUT
 ##############################
-cp 'includes/out/'"$lettertemplate"'.pdf' ./out/motivationsschreiben.pdf
-cp 'includes/out/'"$cvtemplate"'.pdf' .
-
+cp 'out/'"$lettertemplate"'.pdf' ../../out/motivationsschreiben.pdf
+cp 'out/'"$cvtemplate"'.pdf' ../../out/cv.pdf
+cd $home
 ##############################
 ## CHECKING FOR PARAMETERS
 ##############################

@@ -155,7 +155,7 @@
 \newcommand\programming[1]{ 
 	\renewcommand{\programming}{
 		\begin{tikzpicture}
-        	\node [above right] at (0, 4) {$0 \: LOC \: \arrow{3.2} \: 5000 \: LOC$};
+        	
 			\foreach [count=\i] \x/\y in {#1}{
 				\draw[fill=maingray,maingray] (0,\i) rectangle (6,\i+0.4);
 				\draw[fill=white,mainblue](0,\i) rectangle (\y,\i+0.4);
@@ -241,9 +241,9 @@
 
     %------------------------------------------------
     \vspace{4mm}
-    \profilesection{Skills}{4cm}
+    \profilesection{Fähigkeiten}{2.6cm}
     
-    {\large \textbf{Overview}}
+    {\large \textbf{Übersicht}}
 
 	\skills
         
@@ -251,12 +251,12 @@
         
         \vspace{3mm}
        
-	 {\large \textbf{Programming}} 
+	 {\large \textbf{Programmkenntnisse}} 
 
 		 \programming
          
         \vspace{4mm}
-        \profilesection{Projects}{3cm} 
+        \profilesection{Über mich}{3cm} 
         
         \projects
       
@@ -333,6 +333,17 @@
 	}\\
 }
 
+\newcommand{\twentyitemFirst}[6]{%
+	#1&\parbox[t]{0.83\textwidth}{%
+		\textbf{#3}% 
+		\hfill%
+		{\footnotesize#4}%
+        }\\%
+    #2&\parbox[t]{0.83\textwidth}{%
+		\ifblank{#5}{}{#5 \\}
+		#6%
+	}\\
+}
 %----------------------------------------------------------------------------------------
 %	 SMALL LIST ENVIRONMENT
 %----------------------------------------------------------------------------------------
