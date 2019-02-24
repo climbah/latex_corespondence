@@ -12,7 +12,7 @@
 \def\arrow#1{\pspicture[shift=2pt](#1,0)\psline{->}(#1,0)\endpspicture}
 
 \usepackage{pstricks}
-
+\usepackage{pdfpages}
 \usepackage{fontawesome}
 \RequirePackage{tikz}
 \RequirePackage{xcolor}
@@ -28,7 +28,7 @@
 \usepackage{enumitem}
 \setlist[itemize]{leftmargin=*}
 
-\RequirePackage[hidelinks]{hyperref}
+\RequirePackage{hyperref}
 \hypersetup{
     pdftitle={},
     pdfauthor={},

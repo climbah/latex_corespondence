@@ -8,8 +8,7 @@ cvtemplate="template"
 ##############################
 ## CREATING OUT DIRECTORIES
 ##############################
-mkdir -p out/arbeitszeugnisse
-#mkdir out/zertifikate
+mkdir -p out/cert
 mkdir -p includes/generate/out
 
 ##############################
@@ -22,20 +21,27 @@ cd $home
 ## GENERATE THE TEMPLATES
 ##############################
 cd includes/generate
-pdflatex --output-directory='out/' "$lettertemplate"'.tex'
 xelatex --output-directory='out/' "$cvtemplate"'.tex'
-
+pdflatex --output-directory='out/' "$lettertemplate"'.tex'
 ##############################
 ## COPY OUTPUT TO OUT
 ##############################
-cp 'out/'"$lettertemplate"'.pdf' ../../out/motivationsschreiben.pdf
+cp ../docs/* -r ../../out
+cp 'out/'"$lettertemplate"'.pdf' ../../out/motivation.pdf
 cp 'out/'"$cvtemplate"'.pdf' ../../out/cv.pdf
 cd $home
+
+##############################
+## MAKING ZIP
+##############################
+cd out
+#pdfsam -f motivationsschreiben.pdf -f cv.pdf -o candidature.pdf 
 ##############################
 ## CHECKING FOR PARAMETERS
 ##############################
 if [[ $1 == "show" ]]
 then
-    evince "./out/motivationsschreiben.pdf"
+	cd $home
+    evince "./out/cv.pdf"
 fi
 
