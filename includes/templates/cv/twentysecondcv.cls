@@ -28,7 +28,7 @@
 \usepackage{enumitem}
 \setlist[itemize]{leftmargin=*}
 
-\RequirePackage{hyperref}
+\RequirePackage[hidelinks]{hyperref}
 \hypersetup{
     pdftitle={},
     pdfauthor={},
@@ -207,13 +207,13 @@
               $} 
             & \cvnumberphone\\}
             
-      \ifthenelse{\equal{\href{\cvsite}{\cvsite}}{}}{}{
-            {$
-              \begin{array}{l}
-              \hspace{2.8mm} \huge \textnormal{\textcolor{test}{\faGlobe}}
-              \end{array}
-              $} 
-            & \href{http://\cvsite}{\cvsite} \\}
+%      \ifthenelse{\equal{\href{\cvsite}{\cvsite}}{}}{}{
+%            {$
+%              \begin{array}{l}
+%              \hspace{2.8mm} \huge \textnormal{\textcolor{test}{\faGlobe}}
+%              \end{array}
+%              $} 
+%            & \href{http://\cvsite}{\cvsite} \\}
       \ifthenelse{\equal{\cvmail}{}}{}{
             {$
               \begin{array}{l}
@@ -241,7 +241,7 @@
 
     %------------------------------------------------
     \vspace{4mm}
-    \profilesection{Fähigkeiten}{2.6cm}
+    \profilesection{Fähigkeiten}{2.4cm}
     
     {\large \textbf{Übersicht}}
 
@@ -256,8 +256,7 @@
 		 \programming
          
         \vspace{4mm}
-        \profilesection{Über mich}{3cm} 
-        
+                \profilesection{Wieso ich}{3cm} 
         \projects
       
   \end{textblock}

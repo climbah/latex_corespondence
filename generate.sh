@@ -21,8 +21,9 @@ cd $home
 ## GENERATE THE TEMPLATES
 ##############################
 cd includes/generate
+xelatex --output-directory='out/' "$lettertemplate"'.tex'
+wait
 xelatex --output-directory='out/' "$cvtemplate"'.tex'
-pdflatex --output-directory='out/' "$lettertemplate"'.tex'
 ##############################
 ## COPY OUTPUT TO OUT
 ##############################

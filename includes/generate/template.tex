@@ -16,19 +16,19 @@
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 \input{include.tex}
-\documentclass[letterpaper]{twentysecondcv} % a4paper for A4
+\documentclass[a4paper]{twentysecondcv} % a4paper for A4
 
 % Command for printing skill overview bubbles
 \newcommand\skills{ 
 ~
 	\smartdiagram[bubble diagram]{
-        \textbf{~~Daniel~~}\\\textbf{~~Schmid~~},
-        \textbf{~~~~~~~ruhig~~~~~~~},
-        \textbf{Teamgeist},
-        \textbf{~~~kreativ~~~},
+        \textbf{~~~~Daniel~~~~}\\\textbf{~~~~Schmid~~~~},
+        \textbf{~~~~~~~~ruhig~~~~~~~~},
         \textbf{pragmatisch},
-        \textbf{analystisch},
-        \textbf{ziel} - \\\textbf{orientiert}
+        \textbf{~~Teamgeist~~},
+        \textbf{~~~~~kreativ~~~~~},
+        \textbf{~analytisch~},
+        \textbf{~ziel~} - \\\textbf{~~orientiert~~}
     }
 }
 
@@ -37,14 +37,7 @@
 
 % Projects text
 \projects{
-\textbf{Meine} praxiserprobten Kenntnisse in der Software-Entwicklung in C\#.Net, ebenso
-wie meine langjährige Erfahrung in der Analyse, Konzeption, Umsetzung und dem
-Testing individueller Lösungen,\\ bringe ich gerne in dieser attraktiven Position
-wirkungsvoll zum Einsatz
-
-\textbf{Ich} bin mir sicher, dass ich mit meinem technischen Hintergrund, ausgeprägter
-Kommunikationsfähigkeit und hoher Dienstleistungsmentalität, gemeinsam mit
-dem bestehenden Team, schnell und engagiert Mehrwert für die Intersim generier
+\wiesoich
 }
 
 %----------------------------------------------------------------------------------------
@@ -58,24 +51,27 @@ dem bestehenden Team, schnell und engagiert Mehrwert für die Intersim generier
 
 \cvlinkedin{/in/schmid-daniel/}
 \cvgithub{}
-\cvnumberphone{(078) 771 55 22} % Phone number
-\cvsite{daenu-schmid.ch} % Personal website
-\cvmail{daenu.schmidgmail.com} % Email address
+\cvnumberphone{078 771 55 22} % Phone number
+%\cvsite{daenu-schmid.ch} % Personal website
+\cvsite{}
+\cvmail{daenu.schmid@gmail.com} % Email address
 
 %----------------------------------------------------------------------------------------
 
 \begin{document}
 
+\includepdf[pages={1},scale=1]{out/business2.pdf}
+
 \makeprofile % Print the sidebar
+\hypertarget{work_back}{}
 \section{Berufliche Tätigkeit}
 \begin{twenty}
-	\hypertarget{link2_back}{}
 	\twentyitem
-    	{2010 -}
+    	{seit 2010}
         {}
         {Link Institut AG \textnormal{Luzern}}
-        {\hyperlink{link2}{Arbeitszeugnis}}
-        {}
+        {\hyperlink{link2}{\textcolor{pblue}{Zwischenzeugnis}}}
+        {Spezialist IT Entwicklung}
         {\begin{itemize}
 \item Realisierung von Projekten bzw. Teilmodulen im C\# .NET-Umfeld
 (Web-Applikation, Desktop-Applikationen)
@@ -91,8 +87,8 @@ Anwendungen)
 Befragungen
 \item Mithilfe beim Aufbau und Organisation der
 Entwicklungsumgebung
-\item Aufbau und Unterhalt SVN \/ GIT
-	\end{itemize}}
+\item Aufbau und Unterhalt SVN \// GIT
+	\end{itemize}}		
 	\twentyitem
     	{}
         {}
@@ -104,13 +100,13 @@ Entwicklungsumgebung
     	{2009 - 2010}
         {}
         {Datahouse AG \textnormal{Zürich}}
-        {\hyperref[sec:hello]{Arbeitszeugnis}}
-        {Applikationsentwickler im Webbereich}
+        {\hyperlink{datahouse}{\textcolor{pblue}{Arbeitszeugnis}}}
+        {Applikationsentwickler}
         {
 		\begin{itemize}
 		\item Entwicklung von Webapplikationen in PHP
-		\item Implementation eines SOAP-Web-Services in C++
-		\item Erstellung verschiedener Templates in LaTeXT
+		\item Implementation von SOAP-Web-Services in C++
+		\item Erstellung verschiedener Templates in \LaTeX
 		\end{itemize}
 	}	
 	\twentyitem
@@ -124,88 +120,87 @@ Entwicklungsumgebung
     	{2008 - 2009}
         {}
         {Jordi AG \textnormal{Schlieren}}
-        {\hyperref[sec:hello]{\color{pblue}{Arbeitszeugnis}}}
+        {\hyperlink{jordi}{\textcolor{pblue}{Arbeitszeugnis}}}
         {Bereich: Mikroprozessorprogrammierung}
-        {}
-	\twentyitem
-    	{2007 - 2007}
-        {}
-        {Schumacher AG \textbf{Schmitten}}
-        {}
-        {Aushilfejob}
         {}
 	\twentyitem
     	{2006 - 2007}
         {}
         {T-Systems Schweiz AG \textnormal{Zollikofen}}
-        {\hyperref[sec:hello]{\color{pblue}{\color{pblue}{Arbeitszeugnis}}}}
+        {\hyperlink{tsystems}{\textcolor{pblue}{Arbeitszeugnis}}}
         {}
         {}
 	\twentyitem
-    	{2005 - 2005}
+    	{2005}
         {}
         {Bundesamt für Sozialversicherung \textnormal{Bern}}
-        {\hyperref[sec:hello]{\color{pblue}{\color{pblue}{Arbeitszeugnis}}}}
+        {\hyperlink{bsv}{\textcolor{pblue}{Arbeitszeugnis}}}
         {Berufspraktikum als Sachbearbeiter}
         {}
 
 	\twentyitem
-    	{2004 - 2004}
+    	{2004}
 	{}
         {Booktrading,\textnormal{Freiburg}}
-        {\href{http://www.uoguelph.ca/}{\color{pblue}{Arbeitszeugnis}}}
+        {\hyperlink{booktrading}{\textcolor{pblue}{Arbeitszeugnis}}}
         {Berufspraktikum als Sachbearbeiter Buchhaltung}
 	{}
 	\twentyitem
-    	{2003 - 2003}
+    	{2003}
 	{}
         {WABCO (Schweiz) GmbH \textnormal{Bern Bümpliz}}
-        {\href{http://www.uoguelph.ca/}{\color{pblue}{Arbeitszeugnis}}}
+        {\hyperlink{wabco}{\textcolor{pblue}{Lehr - und Arbeitszeugnis}}}
         {Sachbearbeiter Betriebsbuchhaltung/Reporting}
-	{}
-	\twentyitem
-    	{2000 - 2003}
-	{}
-        {WABCO (Schweiz) GmbH \textnormal{Bern Bümpliz}}
-        {\href{http://www.uoguelph.ca/}{\color{pblue}{Arbeitszeugnis}}}
-        {Kaufmännische Lehre}
-	{}
+	{}	
 \end{twenty}
 %----------------------------------------------------------------------------------------
 %	 EDUCATION
 %----------------------------------------------------------------------------------------
+\hypertarget{cert_back}{}
 \section{Ausbildung}
-
 \begin{twenty} % Environment for a list with descriptions
+	\twentyitem
+    	{seit 2019}
+        {}
+        {MCSA Lehrgang \textnormal{Zürich}}
+        {}
+        {}
+        {}	
+	\twentyitem
+    	{2007 - 2009}
+	{}
+        {Informatikumschulung}
+        {\hyperlink{informatik}{\textcolor{pblue}{Diplom}}}
+        {Fachrichtung Applikationsentwicklung}
+        {}
+	\twentyitem
+    	{2005}
+	{}
+        {Cobol Programmierkurs \textnormal{Zürich}}
+        {\hyperlink{cobol}{\textcolor{pblue}{Zertifikat}}}
+        {}
+        {}
+	\twentyitem
+    	{2004}
+	{}
+        {Englischintensivkurs beim WSI \textnormal{Freiburg}}
+        {\hyperlink{toeic}{\textcolor{pblue}{Zertifikat}}}
+        {}
+        {}
 	\twentyitem
     	{2000 - 2003}
         {}
         {Wirtschafts- und Kaderschule \textnormal{KV Bern}}
-        {\hyperref[sec:hello]{Diplom}}
-        {}
-        {}
-	\twentyitem
-    	{2004 - 2004}
-		{}
-        {Englischintensivkurs beim WSI \textnormal{Freiburg}}
-        {\hyperref[sec:hello]{Zertifikat}}
+        {\hyperlink{kv}{\textcolor{pblue}{Diplom}}}
         {}
         {}
 \twentyitem
-    	{2005 - 2005}
-		{}
-        {Cobol Programmierkurs \textnormal{Zürich}}
-        {\hyperref[sec:hello]{Zertifikat}}
+    	{2000 - 2003}
+	{}
+        {WABCO (Schweiz) GmbH \textnormal{Bern Bümpliz}}
         {}
-        {}
-\twentyitem
-    	{2007 -2009}
-		{}
-        {Informatikumschulung}
-        {\hyperref[sec:hello]{Diplom}}
-        {Fachrichtung Applikationsentwicklung}
-        {}
-	%\twentyitem{<dates>}{<title>}{<organization>}{<location>}{<description>}
+        {Kaufmännische Lehre}
+	{}	%\twentyitem{<dates>}{<title>}{<organization>}{<location>}{<description>}
 \end{twenty}
 %----------------------------------------------------------------------------------------
 %	 EXPERIENCE
@@ -221,30 +216,79 @@ Entwicklungsumgebung
         {}
         {}
         {}
-
-        
 	%\twentyitem{<dates>}{<title>}{<location>}{<description>}
 \end{twenty}
 \newpage
 \hypertarget{link2}{}
-\AddToShipoutPictureFG*{%	
-	\AtTextUpperLeft{
-	\vspace{20mm}	\hyperlink{link2_back}{zurück}
-	}
-}\includepdf[pages={1},scale=1]{cert/18_link.pdf}
-\includepdf[pages={1}]{cert/13_link.pdf}
-\includepdf[pages={1}]{cert/10_datahouse.pdf}
-\includepdf[pages={1}]{cert/09_cert_informatik.pdf}
-\includepdf[pages={1}]{cert/09_jordi_ag.pdf}
-\includepdf[pages={1}]{cert/09_informatiker.pdf}
-\includepdf[pages={1}]{cert/05_toeic.pdf}
-\includepdf[pages={1}]{cert/05_course_cobol.pdf}
-\includepdf[pages={1,2}]{cert/05_cert_toeic.pdf}
-\includepdf[pages={1}]{cert/07_t_systems.pdf}
-\includepdf[pages={1,2}]{cert/05_bsv.pdf}
-\includepdf[pages={1}]{cert/04_booktrading.pdf}
-\includepdf[pages={1}]{cert/03_wabco.pdf}
-\includepdf[pages={1}]{cert/03_cert_kv.pdf}
-\includepdf[pages={1}]{cert/02_course_siz.pdf}
+\includepdf[pages={1},scale=1,%
+	picturecommand*={%
+	\put(16,800){\hyperlink{work_back}{\textcolor{pblue}{zurück}}}%
+}]{cert/18_link.pdf}
 
+\hypertarget{link_1}{}
+\includepdf[pages={1},scale=1,%
+	picturecommand*={%
+	\put(16,800){\hyperlink{work_back}{\textcolor{pblue}{zurück}}}%
+}]{cert/13_link.pdf}
+
+\hypertarget{datahouse}{}
+\includepdf[pages={1},scale=1,%
+	picturecommand*={%
+	\put(16,800){\hyperlink{work_back}{\textcolor{pblue}{zurück}}}%
+}]{cert/10_datahouse.pdf}
+\hypertarget{jordi}{}
+\includepdf[pages={1},scale=1,%
+	picturecommand*={%
+	\put(16,800){\hyperlink{work_back}{\textcolor{pblue}{zurück}}}%
+}]{cert/09_jordi_ag.pdf}
+\hypertarget{tsystems}{}
+\includepdf[pages={1},scale=1,%
+	picturecommand*={%
+	\put(16,800){\hyperlink{work_back}{\textcolor{pblue}{zurück}}}%
+}]{cert/07_t_systems.pdf}
+\hypertarget{bsv}{}
+\includepdf[pages={1},scale=1,%
+	picturecommand*={%
+	\put(16,800){\hyperlink{work_back}{\textcolor{pblue}{zurück}}}%
+}]{cert/05_bsv.pdf}
+\includepdf[pages={2},scale=1]{cert/05_bsv.pdf}
+\hypertarget{booktrading}{}
+\includepdf[pages={1},scale=1,%
+	picturecommand*={%
+	\put(16,800){\hyperlink{work_back}{\textcolor{pblue}{zurück}}}%
+}]{cert/04_booktrading.pdf}
+\hypertarget{wabco}{}
+\includepdf[pages={1},scale=1,%
+	picturecommand*={%
+	\put(16,800){\hyperlink{work_back}{\textcolor{pblue}{zurück}}}%
+}]{cert/03_wabco-crop.pdf}
+\hypertarget{informatik}{}
+\includepdf[pages={1},scale=1,%
+	picturecommand*={%
+	\put(16,800){\hyperlink{cert_back}{\textcolor{pblue}{zurück}}}%
+}]{cert/09_informatiker.pdf}
+\includepdf[pages={1},scale=1,%
+	picturecommand*={%
+	\put(16,800){\hyperlink{cert_back}{\textcolor{pblue}{zurück}}}%
+}]{cert/09_cert_informatik.pdf}
+\hypertarget{cobol}{}
+\includepdf[pages={1},scale=1,%
+	picturecommand*={%
+	\put(16,800){\hyperlink{cert_back}{\textcolor{pblue}{zurück}}}%
+}]{cert/05_course_cobol.pdf}
+\hypertarget{toeic}{}
+\includepdf[pages={1},scale=1,%
+	picturecommand*={%
+	\put(16,800){\hyperlink{cert_back}{\textcolor{pblue}{zurück}}}%
+}]{cert/05_toeic.pdf}
+\hypertarget{kv}{}
+\includepdf[pages={1},scale=1,%
+	picturecommand*={%
+	\put(16,800){\hyperlink{cert_back}{\textcolor{pblue}{zurück}}}%
+}]{cert/03_cert_kv.pdf}
+%\hypertarget{siz}{}
+%\includepdf[pages={1},scale=1,%
+%	picturecommand*={%
+%	\put(16,800){\hyperlink{cert_back}{\textcolor{pblue}{zurück}}}%
+%}]{cert/02_course_siz.pdf}
 \end{document} 
