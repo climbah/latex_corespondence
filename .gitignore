@@ -1,6 +1,10 @@
 ## FOLDERS
 includes/out/
 out/
+
+## RIDER PATH
+.idea/
+
 ## EMACS
 *.*~
 *.*#

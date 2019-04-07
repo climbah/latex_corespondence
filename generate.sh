@@ -2,17 +2,12 @@
 ## SET GENERAL VARIABLES
 ##############################
 #lettertemplate="letter_template"
-home=/data/GITLAB/latex_dossier
+home=~/GITLAB/latex_dossier
 lettertemplate="business2"
 cvtemplate="template"
-##############################
-## CREATING OUT DIRECTORIES
-##############################
-mkdir -p out/cert
-mkdir -p includes/generate/out
 
 ##############################
-## Cleanup and Copy
+## Cleanup and Copy 
 ##############################
 cd includes
 ./CopyJob.sh
@@ -27,7 +22,6 @@ xelatex --output-directory='out/' "$cvtemplate"'.tex'
 ##############################
 ## COPY OUTPUT TO OUT
 ##############################
-cp ../docs/* -r ../../out
 cp 'out/'"$lettertemplate"'.pdf' ../../out/motivation.pdf
 cp 'out/'"$cvtemplate"'.pdf' ../../out/cv.pdf
 cd $home
@@ -36,7 +30,7 @@ cd $home
 ## MAKING ZIP
 ##############################
 cd out
-#pdfsam -f motivationsschreiben.pdf -f cv.pdf -o candidature.pdf 
+pdfsam -f motivationsschreiben.pdf -f cv.pdf -o candidature.pdf 
 ##############################
 ## CHECKING FOR PARAMETERS
 ##############################

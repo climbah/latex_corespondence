@@ -1,12 +1,25 @@
-#cleanup 
+#!/usr/bin/env bash
+##############################
+# cleanup Generation Directory
+##############################
 rm generate -r
+
+##############################
+# Create Generation Directory
+##############################
+mkdir -p generate/log
 mkdir -p generate/out
-#copy
+mkdir -p generate/cert
+
+##############################
+# Copy Templates
+##############################
 cp templates/letter/* ./generate/
-#c
 cp templates/cv/* -r ./generate/
-cp include.tex ./generate/
-cp letter_dynamic_data.tex ./generate/
-cp letter_static_data.tex ./generate/
-cp docs/* -r ./generate/
-cp docs/cert/03_wabco.pdf ./generate/03_wabco.pdf
+
+##############################
+# Copy Additional Files
+##############################
+cp *.tex ./generate/
+cp docs/* -r ./generate/cert/
+
