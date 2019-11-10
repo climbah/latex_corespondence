@@ -41,7 +41,7 @@ then
 	cd $home
     evince "./out/full.pdf"
 else
-    echo -n "Open Output?: "
+    echo -n "Open Output? [y|n]: "
     read inp
     if [[ $inp == "y" ]]
     then
