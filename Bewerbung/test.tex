@@ -1,0 +1,24 @@
+\documentclass{article}
+\usepackage[ngerman]{babel}
+\usepackage{blindtext}
+\usepackage{pdfpages}
+\usepackage{hyperref}
+\begin{document}
+\blindtext
+\phantomsection% Setzt einen Anker
+\label{link1}
+
+Erstes Ziel
+
+\blindtext[4]
+\hyperref[link1]{Klick mich}
+\blindtext[2]
+
+\hypertarget{link2}{Zweites Ziel}
+\includepdf[pages={1},scale=1,%
+	picturecommand*={%
+	\put(16,800){\hyperlink{work_back}{zurück}}%
+}]{03_wabco.pdf}
+\blindtext[2]
+\hyperlink{link2}{Klich mich auch}
+\end{document}
