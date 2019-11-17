@@ -2,6 +2,7 @@
 ##############################
 # cleanup Generation Directory
 ##############################
+home=./../../
 rm generate -r
 
 ##############################
@@ -12,8 +13,9 @@ mkdir -p generate/out
 mkdir -p generate/cert
 
 ##############################
-# Copy Templates
+# Copy Templatestemplates
 ##############################
+cp ./../../Shared/letter/business2.tex ./generate/
 cp templates/letter/* ./generate/
 cp templates/cv/* -r ./generate/
 
