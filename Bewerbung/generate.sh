@@ -27,7 +27,8 @@ xelatex --output-directory='out/' "$cvtemplate"'.tex'
 cp 'out/'"$lettertemplate"'.pdf' $home/out/motivation.pdf -f
 cp 'out/'"$cvtemplate"'.pdf' $home/out/cv.pdf -f
 cd $home
-pdftk ./out/motivation.pdf ./out/cv.pdf cat output ./out/full.pdf
+pdftk ./out/motivation.pdf ./out/cv.pdf cat output ./out/candidature.pdf
+
 ##############################
 ## MAKING ZIP
 ##############################
@@ -46,7 +47,7 @@ else
     if [[ $inp == "y" ]]
     then
         cd $home
-        evince "./out/cv.pdf"
+        evince "./out/candidature.pdf"
     fi
 fi
 

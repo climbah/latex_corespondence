@@ -1,0 +1,35 @@
+\documentclass[12pt]{letter}
+
+\date{\today}
+\signature{Unterschrift}
+\address{Adresse\\des\\Absenders}
+
+\def\chopline#1;#2 \\{
+\def\vorname{#1}
+\def\name{#2}
+}
+
+\newif\ifmore \moretrue
+
+\begin{document}
+
+    \newread\quelle
+    \openin\quelle=daten.dat
+
+    \loop
+    \read\quelle to \zeile
+    \ifeof\quelle
+    \global\morefalse
+    \else
+    \expandafter\chopline\zeile\\
+    \begin{letter}{\vorname \name\\usw.\\usf.}
+        \opening{Hallo \name, \vorname!}
+        .\\
+        \closing{Hochachtungsvoll,\\ Absender}
+    \end{letter}
+    \fi
+    \ifmore\repeat
+
+    \closein\quelle
+
+\end{document}
