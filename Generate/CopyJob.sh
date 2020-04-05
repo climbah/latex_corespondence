@@ -12,6 +12,7 @@ then
     cp -vr $type/$1/* $generate
     #copy_certs_cv
     cp -v $type/docs/* $generate/cert
+    ./CopyJob.sh letter
 fi
 if [[ $1 == "letter" ]]
 then

@@ -1,9 +1,11 @@
+#!/usr/bin/env bash
 ##############################
 ## SET GENERAL VARIABLES
 ##############################
 home=$PWD
 generate=./Generate/
 type=.
+cvtemplate="template"
 template="business2"
 
 ##############################
@@ -14,10 +16,8 @@ then
 	echo "EXITING > NO ARGUMENTS"
 	exit	
 else 
-    if [[ $1 == "cv" ]]
+    if [[ $1 == "letter" ]]
     then
-        template="template"
-    else
         template="letter_template"
     fi
 fi
@@ -34,8 +34,8 @@ rm temp/ -rf && mkdir temp
 ##############################
 cd temp
 xelatex --output-directory='../out/' "$template"'.tex'
-#wait
-#xelatex --output-directory='out/' "$cvtemplate"'.tex'
+wait
+xelatex --output-directory='out/' "$cvtemplate"'.tex'
 ###############################
 ### COPY OUTPUT TO OUT
 ###############################
