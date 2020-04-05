@@ -4,7 +4,7 @@ Generate/*.pdf
 out/
 
 ## RIDER PATH
-.idea/
+.idea/*
 
 ## EMACS
 *.*~
@@ -146,3 +146,4 @@ sympy-plots-for-*.tex/
 *.bak
 *.sav
 /Generate/temp/
+/.idea/.idea.latex_dossier/
