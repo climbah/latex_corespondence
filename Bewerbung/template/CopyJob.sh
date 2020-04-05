@@ -15,13 +15,13 @@ mkdir -p generate/cert
 ##############################
 # Copy Templatestemplates
 ##############################
-cp ./../../Shared/letter/business2.tex ./generate/
-cp templates/letter/* ./generate/
-cp templates/cv/* -r ./generate/
+cp -v ../../Shared/letter/template/business2.tex ./generate/
+cp -v templates/cv/* -r ./generate/
 
 ##############################
 # Copy Additional Files
 ##############################
 cp *.tex ./generate/
+cp ../../Shared/letter/conf.letter.static.tex ./generate/
 cp docs/* -r ./generate/cert/
 
