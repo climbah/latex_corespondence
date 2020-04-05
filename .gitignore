@@ -1,5 +1,6 @@
 ## FOLDERS
-includes/out/
+Generate/temp/
+Generate/*.pdf
 out/
 
 ## RIDER PATH
@@ -144,3 +145,4 @@ sympy-plots-for-*.tex/
 # WinEdt
 *.bak
 *.sav
+/Generate/temp/
