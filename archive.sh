@@ -7,5 +7,5 @@ ls -lah | grep a
 
 read -p 'Archive Name: ' name
 7z a $name.7z *.tex
-mv $name.7z archive
+mv $name.7z ./../Archiv/
 echo ''"$name"'.7z'
