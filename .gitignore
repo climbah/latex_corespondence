@@ -2,7 +2,7 @@
 Generate/temp/
 Generate/*.pdf
 out/
-
+Archiv/
 ## RIDER PATH
 .idea/*
 
@@ -147,3 +147,4 @@ sympy-plots-for-*.tex/
 *.sav
 /Generate/temp/
 /.idea/.idea.latex_dossier/
+/Archiv/
