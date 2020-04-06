@@ -1,6 +1,11 @@
-%ARCHIVING SCRIPT
-evince ./out/motivationsschreiben.pdf
+#!/usr/bin/env bash
+home=.
+cd conf
+ls -lah | grep a
+
+#evince ./out/motivationsschreiben.pdf
 
 read -p 'Archive Name: ' name
-
-echo ''"$name"'.zip'
+7z a $name.7z *.tex
+mv $name.7z archive
+echo ''"$name"'.7z'

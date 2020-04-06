@@ -34,8 +34,8 @@ rm temp/ -rf && mkdir temp
 ##############################
 cd temp
 xelatex --output-directory='../out/' "$template"'.tex'
-wait
-xelatex --output-directory='out/' "$cvtemplate"'.tex'
+#wait
+#xelatex --output-directory='out/' "$cvtemplate"'.tex'
 ###############################
 ### COPY OUTPUT TO OUT
 ###############################
