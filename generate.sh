@@ -19,6 +19,9 @@ else
     if [[ $1 == "letter" ]]
     then
         template="letter_template"
+    elif [[ $1 == "cv" ]] 
+    then
+        template="template"
     fi
 fi
 
@@ -55,7 +58,7 @@ xelatex --output-directory='../out/' "$template"'.tex'
 if [[ $1 == "show" ]]
 then
 	cd $home
-    evince "./out/full.pdf"
+    evince "./out/$template.pdf"
 else
     echo -n "Open Output? [y|n]: "
     read inp

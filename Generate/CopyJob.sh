@@ -36,4 +36,4 @@ fi
 # COPY CONF
 #############
 
-cp -v $home/conf/$1* $generate
+cp -v $home/conf/* $generate
