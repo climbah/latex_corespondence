@@ -5,4 +5,4 @@ if [[ $inp != "" ]]
 then
    template=$inp
 fi
-echo  'Template=' $template
+echo 'Template=' $template
